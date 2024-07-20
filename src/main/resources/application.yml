@@ -1,0 +1,13 @@
+spring:
+  application:
+    name: spring-ai-rag
+
+  ai:
+    openai:
+      api-key: zz
+      chat:
+        options:
+          model: zzz
+
+key:
+  open-ai: ${OPEN-Ai-API-KEY}
