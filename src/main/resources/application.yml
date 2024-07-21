@@ -1,10 +1,19 @@
 spring:
   application:
     name: spring-ai-rag
-
+  elasticsearch:
+    uris: http://localhost:9200
+    username: elastic
+    password: 1234
   ai:
+    vectorstore:
+      elasticsearch:
+        initialize-schema: true
     openai:
-      api-key: zz
+      api-key: ${OPEN-Ai-API-KEY}
+      embedding:
+        options:
+          model: text-embedding-ada-002
       chat:
         options:
           model: zzz

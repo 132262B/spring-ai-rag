@@ -25,10 +25,19 @@ dependencies {
     implementation("org.springframework.boot:spring-boot-starter-web")
     implementation("com.fasterxml.jackson.module:jackson-module-kotlin")
     implementation("org.jetbrains.kotlin:kotlin-reflect")
-    implementation("org.springframework.ai:spring-ai-openai-spring-boot-starter")
     testImplementation("org.springframework.boot:spring-boot-starter-test")
     testImplementation("org.jetbrains.kotlin:kotlin-test-junit5")
     testRuntimeOnly("org.junit.platform:junit-platform-launcher")
+
+    implementation("org.springframework.ai:spring-ai-openai-spring-boot-starter")
+    implementation("org.springframework.ai:spring-ai-elasticsearch-store-spring-boot-starter")
+    implementation("org.apache.httpcomponents.client5:httpclient5:5.2.1")
+
+    implementation("org.apache.pdfbox:pdfbox:2.0.27")
+
+    // https://mvnrepository.com/artifact/group.springframework.ai/spring-ai-pdf-document-reader
+//    implementation("group.springframework.ai:spring-ai-pdf-document-reader:1.1.0")
+
 }
 
 dependencyManagement {
