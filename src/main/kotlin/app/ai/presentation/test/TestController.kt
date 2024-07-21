@@ -48,26 +48,4 @@ class TestController(
         return chatResponse
     }
 
-    @GetMapping("/test2")
-    fun test2() {
-        val documents: List<Document> = listOf(
-            Document("Spring AI rocks!! Spring AI rocks!! Spring AI rocks!! Spring AI rocks!! Spring AI rocks!!"),
-            Document("The World is Big and Salvation Lurks Around the Corner"),
-            Document("You walk forward facing the past and you turn back toward the future.")
-        )
-
-
-        // Add the documents to Qdrant
-        vectorStore.add(documents)
-
-        val searchRequest = SearchRequest.query("Spring").withTopK(5)
-
-        try {
-//            vectorStore.similaritySearch(searchRequest)
-            println(vectorStore.similaritySearch(searchRequest))
-        } catch (e: Exception) {
-            println("Error while searching: ${e.message}")
-        }
-    }
-
 }
