@@ -1,6 +1,8 @@
 spring:
   application:
     name: spring-ai-rag
+
+
   elasticsearch:
     uris: http://localhost:9200
     username: elastic
@@ -17,6 +19,9 @@ spring:
       chat:
         options:
           model: zzz
-
+  servlet:
+    multipart:
+      max-file-size: 128MB
+      max-request-size: 128MB
 key:
   open-ai: ${OPEN-Ai-API-KEY}
