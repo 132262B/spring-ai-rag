@@ -2,11 +2,17 @@ spring:
   application:
     name: spring-ai-rag
 
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/rag-api?useSSL=false
+    username: root
+    password: 1234
 
   elasticsearch:
     uris: http://localhost:9200
     username: elastic
     password: 1234
+
   ai:
     vectorstore:
       elasticsearch:
@@ -19,9 +25,11 @@ spring:
       chat:
         options:
           model: zzz
+
   servlet:
     multipart:
       max-file-size: 128MB
       max-request-size: 128MB
+
 key:
   open-ai: ${OPEN-Ai-API-KEY}

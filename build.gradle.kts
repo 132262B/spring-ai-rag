@@ -29,11 +29,20 @@ dependencies {
     testImplementation("org.jetbrains.kotlin:kotlin-test-junit5")
     testRuntimeOnly("org.junit.platform:junit-platform-launcher")
 
+    // JPA
+    implementation("org.springframework.boot:spring-boot-starter-data-jpa")
+
+    // mysql
+    runtimeOnly("com.mysql:mysql-connector-j")
+
+    // Spring Ai
     implementation("org.springframework.ai:spring-ai-openai-spring-boot-starter")
     implementation("org.springframework.ai:spring-ai-elasticsearch-store-spring-boot-starter")
     implementation("org.apache.httpcomponents.client5:httpclient5:5.2.1")
 
+    // PDF BOX
     implementation("org.apache.pdfbox:pdfbox:2.0.27")
+
 
     // https://mvnrepository.com/artifact/group.springframework.ai/spring-ai-pdf-document-reader
 //    implementation("group.springframework.ai:spring-ai-pdf-document-reader:1.1.0")
