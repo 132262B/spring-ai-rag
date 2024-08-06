@@ -9,10 +9,6 @@ tasks.getByName("jar") {
 }
 
 dependencies {
-    implementation(project(":core-domain"))
-    implementation(project(":core-constant"))
-    API(project(":web"))
-
-    implementation("org.springframework.boot:spring-boot-starter-web")
-    implementation("org.springframework.boot:spring-boot-starter-validation")
+    implementation(project(":presentation-user"))
+    implementation(project(":web"))
 }
